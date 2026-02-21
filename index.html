@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GMD – vCard Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-spinner-container">
+      <div class="logo-background"></div>
+      <img src="Logo Solidiagui.png" alt="Logo Solidiagui" class="splash-logo">
+      <div class="spinner spinner-1"></div> 
+      <div class="spinner spinner-2"></div>
+      <div class="spinner spinner-3"></div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <div class="cover">
+        <div class="image-slider" id="imageSlider">
+          <img src="cover.jpg" alt="Photo de couverture 1" class="cover-img" />
+          <img src="cover2.jpeg" alt="Photo de couverture 2" class="cover-img" />
+          <img src="cover3.jpeg" alt="Photo de couverture 3" class="cover-img" />
+          <img src="cover4.jpg" alt="Photo de couverture 1" class="cover-img" />
+          <img src="cover5.jpeg" alt="Photo de couverture 2" class="cover-img" />
+          <img src="cover6.jpg" alt="Photo de couverture 3" class="cover-img" />
+          <img src="cover7.jpeg" alt="Photo de couverture 3" class="cover-img" />
+        </div>
+      </div>
+      
+      <a href="about.html" class="about-button">À propos de nous</a>
+      <div class="logo-wrap">
+        <img src="Logo Solidiagui.png" alt="Logo" class="logo" />
+      </div>
+
+      <div class="profile-wrap">
+          <img src="ZAHO.jpg" alt="Photo de profil" class="profile" />
+      </div>
+
+      <header class="identity">
+        <h1 class="fullname">GENERAL MAMADI <span class="accent"></span> Doumbouya</h1>
+        <p class="role">Chef de l'Etat</p>
+        <div id="status" class="status">Vérification du statut...</div>
+      </header>
+
+      <section class="company">
+        <h2 class="brand">GMD</h2>
+        <p class="tagline">Génération pour la Modernité et le Dévéloppement </p>
+      </section>
+
+      <nav class="actions">
+        <a class="action" href="tel:+224612282644" aria-label="Appeler">📞 Appeler</a>
+        <a class="action" href="https://wa.me/224612282644" target="_blank" rel="noopener" aria-label="WhatsApp">💬 WhatsApp</a>
+        <a class="action" href="mailto:directoiredecampagne@gmail.com" aria-label="Email">✉️ Email</a>
+        <a class="action" href="https://maps.app.goo.gl/hxnVqWSUzejSZfkg6" target="_blank" rel="noopener" aria-label="Adresse">📍 Adresse</a>
+      </nav>
+
+      <section class="learn-more">
+        <a href="en_savoir_plus.html" class="btn">En savoir plus</a>
+      </section>
+
+      <section class="hours">
+        <h3>Heures d’ouverture</h3>
+        <ul class="hours-list">
+          <li><span>Lundi</span><span>08:45 – 17:00</span></li>
+          <li><span>Mardi</span><span>08:45 – 17:00</span></li>
+          <li><span>Mercredi</span><span>08:45 – 17:00</span></li>
+          <li><span>Jeudi</span><span>08:45 – 17:00</span></li>
+          <li><span>Vendredi</span><span>08:45 – 17:00</span></li>
+          <li><span>Samedi</span><span>08:45 – 14:00</span></li>
+          <li><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+      </section>
+
+      <section class="gallery">
+        <div class="tile"><img src="image/GMD-37.jpg" alt="Visuel 1" /></div>
+        <div class="tile"><img src="image/GMD-01.jpg" alt="Visuel 2" /></div>
+        <div class="tile"><img src="image/GMD-38.jpg" alt="Visuel 3" /></div>
+      </section>
+
+      <section class="socials">
+        <a href="#" aria-label="Facebook" class="social">f</a>
+        <a href="https://wa.me/224612282644" aria-label="WhatsApp / WhatsApp" class="social">w</a>
+        <a href="#" aria-label="X / Twitter" class="social">x</a>
+        <a href="#" aria-label="LinkedIn" class="social">in</a>
+        <a href="#" aria-label="Instagram" class="social">ig</a>
+      </section>
+
+      <section class="cta">
+        <button class="btn" onclick="downloadVCF()">💾 Enregistrer le contact</button>
+        <button class="btn" onclick="shareCard()">🔗 Partager</button>
+        <button class="btn outline" onclick="generateQR()">📱 QR Code vCard</button>
+      </section>
+
+      <section id="qrSection" class="qr hidden">
+        <h3>Scannez pour ajouter le contact</h3>
+        <div id="qrcode"></div>
+        <button class="btn tiny" onclick="hideQR()">Fermer</button>
+      </section>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> GMD — Tous droits réservés
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>En savoir plus - GMD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="parallax-bg"></div> 
+  <main class="container">
+    <section class="page-container">
+      <h1>Nos Projets</h1>
+      <p>
+        Découvrez les grands piliers projets GMD
+      </p>
+      <nav class="actions" style="justify-content:center;">
+        <a href="industrie.html" class="action">PROJET DE TRANSFORMATION ECONOMIQUE</a>
+        <a href="distribution.html" class="action">LE PROJET SOCIAL</a>
+      </nav>
+      <a href="index.html" class="back-btn">← Retour</a>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> GMD — Tous droits réservés
+    </footer>
+  </main>
+  
+  <script src="script.js"></script>
+  <script>
+    const YEAR_EL = document.getElementById('year');
+    if (YEAR_EL) YEAR_EL.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
